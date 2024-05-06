@@ -35,5 +35,5 @@ try {
     die($error_message);
 }
 
-// estos cambios son en feature
+
 ?>
