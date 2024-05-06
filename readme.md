@@ -1,3 +1,3 @@
-## proyecto conexión de android con mysql
+## Rest api php
 
-Este proyecto es un rest api para conexion a android mysql
+Este proyecto es un rest api en php para conexion a android mysql
