@@ -1,4 +1,6 @@
 <?php
+// Establecer la zona horaria a México Central
+date_default_timezone_set('America/Mexico_City');
 // Configuración de la conexión
 $hostname = "localhost";
 $username = "root";
@@ -22,11 +24,14 @@ try {
         // Puedes realizar operaciones con la base de datos aquí
         echo "Conexion";
     }
-}  catch (Exception $e) {
+} catch (Exception $e) {
+    // Obtener la fecha y hora actual
+    $fecha_actual = date("Y-m-d H:i:s");
+
     // Manejar la excepción
-    $error_message = "Exception: " . $e->getMessage();
+    $error_message = "[$fecha_actual] Exception: " . $e->getMessage();
     $error_message = str_replace("\n", " ", $error_message); // Reemplazar saltos de línea con espacios
-    file_put_contents("log.txt", $error_message . PHP_EOL, FILE_APPEND); // Guardar el error en el archivo de registro
+    file_put_contents("log.txt", $error_message . PHP_EOL. PHP_EOL, FILE_APPEND); // Guardar el error en el archivo de registro
     die($error_message);
 }
 ?>
