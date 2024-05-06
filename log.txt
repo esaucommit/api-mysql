@@ -1,0 +1,4 @@
+[2024-05-06 11:02:55] Exception: Error al conectar a la base de datos: Unknown database 'android_mysq'
+
+[2024-05-06 11:02:59] Exception: Error al conectar a la base de datos: Unknown database 'android_mysq'
+
