@@ -34,4 +34,6 @@ try {
     file_put_contents("log.txt", $error_message . PHP_EOL. PHP_EOL, FILE_APPEND); // Guardar el error en el archivo de registro
     die($error_message);
 }
+
+// estos cambios son en feature
 ?>
