@@ -22,7 +22,7 @@ try {
     } else {
         // La conexión fue exitosa
         // Puedes realizar operaciones con la base de datos aquí
-        echo "Conexion";
+       // echo "Conexion";
     }
 } catch (Exception $e) {
     // Obtener la fecha y hora actual
