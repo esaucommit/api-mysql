@@ -24,8 +24,9 @@ try {
     }
 }  catch (Exception $e) {
     // Manejar la excepción
-    $error_message = $e->getMessage();
-    error_log($error_message, 3, "log.txt"); // Registrar el error en el archivo de registro
+    $error_message = "Exception: " . $e->getMessage();
+    $error_message = str_replace("\n", " ", $error_message); // Reemplazar saltos de línea con espacios
+    file_put_contents("log.txt", $error_message . PHP_EOL, FILE_APPEND); // Guardar el error en el archivo de registro
     die($error_message);
 }
 ?>
