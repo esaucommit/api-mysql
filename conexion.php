@@ -3,7 +3,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "android_mysql";
+$database = "android_mysq";
 
 // Configurar para que no muestre advertencias
 error_reporting(E_ALL & ~E_WARNING);
@@ -22,9 +22,10 @@ try {
         // Puedes realizar operaciones con la base de datos aquí
         echo "Conexion";
     }
-} catch (Exception $e) {
+}  catch (Exception $e) {
     // Manejar la excepción
-    error_log($e->getMessage()); // Registrar el error en el archivo de registro
-    die( $e->getMessage());
+    $error_message = $e->getMessage();
+    error_log($error_message, 3, "log.txt"); // Registrar el error en el archivo de registro
+    die($error_message);
 }
 ?>
