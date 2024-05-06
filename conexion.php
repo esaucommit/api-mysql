@@ -3,7 +3,11 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "android_mysq";
+$database = "android_mysql";
+
+// Configurar para que no muestre advertencias
+error_reporting(E_ALL & ~E_WARNING);
+
 // Intenta realizar la conexión
 try {
     // Crear una nueva instancia de mysqli
@@ -16,11 +20,11 @@ try {
     } else {
         // La conexión fue exitosa
         // Puedes realizar operaciones con la base de datos aquí
-        echo "Conexión exitosa";
+        echo "Conexion";
     }
 } catch (Exception $e) {
     // Manejar la excepción
     error_log($e->getMessage()); // Registrar el error en el archivo de registro
-    die($e);
+    die( $e->getMessage());
 }
 ?>
