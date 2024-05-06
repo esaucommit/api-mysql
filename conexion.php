@@ -1,8 +1,8 @@
 <?php
 // Configuración de la conexión
 $hostname = "localhost";
-$username = "tu_usuario";
-$password = "tu_contraseña";
+$username = "root";
+$password = "";
 $database = "android_mysql";
 
 // Crear una nueva instancia de mysqli
